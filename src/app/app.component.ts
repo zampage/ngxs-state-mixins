@@ -1,13 +1,22 @@
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Select } from '@ngxs/store';
+import { Observable } from 'rxjs';
+import {
+  DoctorState,
+  DoctorStateQueries,
+  MedicalLicense,
+} from '../state/doctor.state';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  imports: [AsyncPipe, DatePipe],
 })
 export class AppComponent {
-  title = 'mixin-states';
+  @Select(DoctorState.medicalLicense) license$!: Observable<MedicalLicense>;
+  @Select(DoctorStateQueries.fullLicense) fullLicense$!: Observable<string>;
+  @Select(DoctorStateQueries.postal) postal$!: Observable<string>;
 }
