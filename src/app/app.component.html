@@ -1,3 +1,6 @@
+<h1>State Mixin concept</h1>
+
+<h2>Observables</h2>
 <dl>
   <dt>License expiration date:</dt>
   <dd>{{ (license$ | async)!.expirationDate | date }}</dd>
@@ -5,4 +8,15 @@
   <dd>{{ fullLicense$ | async }}</dd>
   <dt>Postal:</dt>
   <dd>{{ postal$ | async }}</dd>
+</dl>
+
+<h2>Signals</h2>
+<dl>
+  <dt>License expiration date:</dt>
+  <dd>{{ license()
+ .expirationDate | date }}</dd>
+  <dt>Full License:</dt>
+  <dd>{{ fullLicense() }}</dd>
+  <dt>Postal:</dt>
+  <dd>{{ postal() }}</dd>
 </dl>
