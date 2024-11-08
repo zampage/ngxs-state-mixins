@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { faker } from '@faker-js/faker';
 import { Selector, State } from '@ngxs/store';
+import { StateMixinBuilder } from './lib/mixin';
 import {
   AddressStateExtension,
   AddressStateExtensionModel,
-} from './address.state';
-import { StateMixinBuilder } from './helper/state-mixin';
+} from './mixins/address.state';
 import {
   PersonStateExtension,
   PersonStateExtensionModel,
-} from './person.state';
+} from './mixins/person.state';
 
 export type MedicalLicense = {
   expirationDate: Date;

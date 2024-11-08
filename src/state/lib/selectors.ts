@@ -1,5 +1,5 @@
 import { createSelector } from '@ngxs/store';
-import { Constructor } from './state-mixin';
+import { Constructor } from './mixin';
 
 export function createChildSelectors<
   TStateModel,

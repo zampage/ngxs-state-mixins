@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mixin-states": {
+    "state-mixins": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/mixin-states",
+            "outputPath": "dist/state-mixins",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "mixin-states:build:production"
+              "buildTarget": "state-mixins:build:production"
             },
             "development": {
-              "buildTarget": "mixin-states:build:development"
+              "buildTarget": "state-mixins:build:development"
             }
           },
           "defaultConfiguration": "development"

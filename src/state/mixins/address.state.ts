@@ -1,6 +1,6 @@
 import { State } from '@ngxs/store';
-import { createChildSelectors } from './helper/state-helper';
-import { Constructor } from './helper/state-mixin';
+import { Constructor } from '../lib/mixin';
+import { createChildSelectors } from '../lib/selectors';
 
 type AddressStateModel = {
   street: string;
